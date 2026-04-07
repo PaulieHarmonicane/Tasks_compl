@@ -9,6 +9,6 @@
 5. mapper ищет всевозможные варианты заполнения полей, сворачивается в тупиковых ветках или при успешном дохождении до конца. Законченная версия поля лежит в kg.full_map
 
 **Результат работы программы можно увидеть на изображениях:** <br>
-<img src="terminal output.png" alt="Вывод в терминале" width="300" height="auto">
+<img src="terminal output.png" alt="Вывод в терминале" width="300" height="auto"> <br>
 <img src="Solved ken-ken.png" alt="Решение на сайте" width="300" height="auto">
 

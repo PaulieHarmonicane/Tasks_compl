@@ -1,12 +1,12 @@
 import random as r
 
 def create_matrix():
-    m = r.randint(1, 9)
-    n = r.randint(1, 10-m)
+    m = r.randint(2, 8)
+    n = r.randint(2, 10-m)
     print(n,m)
     d_matr = []
     for i in range(m):
-        row = [r.randint(-10, 10) for j in range(n)]
+        row = [r.randint(-100, 101) for j in range(n)]
         d_matr.append(row)
     for row in d_matr:
         print(row)

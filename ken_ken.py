@@ -1,7 +1,7 @@
 class KenGame():
     def __init__(self, f_size):
         self.f_size = f_size
-        self.full_node = []
+        self.full_map = []
         self.field = []
         
     def create_field(self):
@@ -68,7 +68,7 @@ class KenGame():
     def mapper(self, i, j):
         if i == self.f_size:
             c_field = [row[:] for row in self.field]
-            self.full_node.append(c_field)
+            self.full_map.append(c_field)
             return   
                     
         ni = i + (j+1)//self.f_size
@@ -111,21 +111,6 @@ cond = """1,1; 1,2 = 1-
 4,4; 4,5 = 5+
 5,4; 5,5 = 2-"""
 
-cond_matr = [
-    [[[1,1], [1,2]], ["4-"]],
-    [[[2,1], [3,1]], ["2-"]],
-    [[[4,1], [5,1], [5,2]], ["32*"]],
-    [[[2,2], [3,2], [3,3]], ["6*"]],
-    [[[4,2], [4,3]], ["2/"]],
-    [[[1,3], [2,3], [2,4]], ["8+"]],
-    [[[5,3], [5,4]], ["2-"]],
-    [[[1,4], [1,5]], ["2-"]],
-    [[[3,4]], ["2"]],
-    [[[2,5], [3,5]], ["1-"]],
-    [[[4,4], [4,5], [5,5]], ["9+"]]
-]
-
-
 
 
 kg = KenGame(5)
@@ -138,7 +123,7 @@ kg.mapper(0,0)
 
 
 
-for f in kg.full_node:
+for f in kg.full_map:
     for row in f:
         print(row)
     print()
